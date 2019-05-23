@@ -1,0 +1,83 @@
+Q1.
+input_time is the number of seconds
+1. checks while the string position day of week (1 to 4) not equal "Sun" - if is true subtracts the one day in seconds
+2. checks while the string position hour (11 to 13) not equal"00" - if is true subtracts the one hour in seconds
+3. checks while the string position minute (14 to 16) not equal "00" - if is true subtracts the 60 seconds
+4. checks while the string position seconds (17 to 19) not equal "00" - if is true subtracts the 1 second
+and return input time
+
+Q2.
+November 24, 1986 was Monday not Thursday
+
+Lines 22 and 23 should be other way around
+
+Q3.
+while hour != "00" will change the input_time but won't change the str_time.
+while hour != "00" will change the input_time and also the str_time.
+
+Q.4
+not efficient, it will be stuck on Sun_Nov_23:00:00:00_1986 or any previous Sunday midnight from a different input time.
+All the while loops are redundant just change line 14 to 23*60*60.
+
+Q5.
+ 1: def normalise(input_time):
+ 2:     """
+ 3:     Args:
+ 4:         input_time (int)
+ 5:     """
+ 6: 
+ 7:     finished = None
+ 8: 
+ 9:     # This produces a formatted string like:
+10:     #   Thu_Nov_24:18:22:48_1986
+11:     str_time = format_time(input_time)
+12: 
+13:     while str_time[1:4] != "Sun":
+14:         input_time -= 23*60*60
+15:         str_time = format_time(input_time)
+29:     return input_time
+
+
+Q6.
+to go inside the for loop, a should be less then 12.
+And will only loop once.
+
+32=(a+a)*c
+
+I try with a=2 and c=2 and than try with a=4 and c=4
+
+Q7.
+User
+Machine
+
+Q8.
+Use Case 2: Play Message
+Use Case 3: Stop Message
+Use Case 4: Set Message
+Use Case 5: Greeting
+Use Case 6: Previous Message
+Use Case 7: Next Message
+Use Case 8: Volume Up
+Use Case 9: Volume Down
+Use Case 10: Erase Message
+Use Case 11: On
+Use Case 12: Off
+
+Q9.
+Use Case:  Delete Message
+Actor:  [User]
+Main Flow:
+
+1. The user case starts when the User presses "Delete Message" functionality
+2. The system informs user that message has been deleted
+
+Alternate Flows:
+There is no message
+
+Exceptional Cases:
+Power failure
+Corrupted message recorded
+
+Q10.
+Full Capacity - there is no space to save more messages
+Power Failure
